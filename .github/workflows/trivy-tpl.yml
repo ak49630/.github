@@ -14,8 +14,8 @@ jobs:
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
-        #image-ref: ghcr.io/${{ github.repository }}:${{ steps.release_ver.outputs.value }}
-        image-ref: ghcr.io/th2-net/th2-codec-sailfish:3.13.0-th2-4253-jar-publishing-3515151579-f14beb2  
+        image-ref: ghcr.io/${{ github.repository }}:${{ steps.release_ver.outputs.value }}
+        #image-ref: ghcr.io/th2-net/th2-codec-sailfish:3.13.0-th2-4253-jar-publishing-3515151579-f14beb2  
         severity: 'CRITICAL,HIGH,MEDIUM'
         format: 'sarif'
         output: 'trivy-results.sarif'
