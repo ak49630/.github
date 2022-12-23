@@ -21,7 +21,8 @@ jobs:
         format: 'sarif'
         output: 'trivy-results.sarif'
         exit-code: '1'
-        ignore-unfixed: true
+        ignore-unfixed: false
+        list-all-pkgs: false
         vuln-type: 'os,library'
     - name: Upload Trivy scan results to GitHub Security tab
       if: always()
