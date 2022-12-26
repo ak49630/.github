@@ -4,6 +4,10 @@ on:
   push:
     branches-ignore:
     - master
+  workflow_call:  
+    secrets:
+      CR_PAT:
+        required: true
 
 jobs:
   build:
